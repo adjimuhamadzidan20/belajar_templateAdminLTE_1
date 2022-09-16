@@ -51,6 +51,7 @@
                     <th>QR Code</th>
                     <th>ID User</th>
                     <th>Nama User</th>
+                    <th>Email</th>
                     <th>Status</th>
                     <th><center>Action</center></th>
                   </tr>
@@ -58,7 +59,7 @@
                 <tbody>
                   <?php  
                     $no = 0;
-                    $sql = $mysqli->query("SELECT * FROM tb_user ORDER BY nama_user ASC");
+                    $sql = $mysqli->query("SELECT * FROM tb_user");
                     while ($data = mysqli_fetch_assoc($sql)) :
                     $no++;
                   ?>
@@ -75,6 +76,7 @@
                     </td>
                     <td><?= $data['id_user']; ?></td>
                     <td><?= $data['nama_user']; ?></td>
+                    <td><?= $data['email']; ?></td>
                     <td><?= $data['status']; ?></td>
                     <td>
                       <center>
@@ -124,6 +126,10 @@
               <div class="form-group">
                 <label for="exampleInputEmail1">Nama User</label>
                 <input type="Text" class="form-control" placeholder="Masukan Nama" name="nama">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="Text" class="form-control" placeholder="Masukan Nama" name="email">
               </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Status</label>
