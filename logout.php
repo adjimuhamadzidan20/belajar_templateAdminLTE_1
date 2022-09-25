@@ -10,6 +10,6 @@
 
 	// remove cookie
 	setcookie('id_user', '', time() - 3600);
-    setcookie('pass_user', '', time() -3600);
+    	setcookie('pass_user', '', time() -3600);
 
 ?>
