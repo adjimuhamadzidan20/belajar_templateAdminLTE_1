@@ -23,17 +23,17 @@
           <div class="card">
             <div class="card-header">
               <h3 class="card-title">Data User & Admin</h3><br>
-              <button type="button" class="btn btn-success mt-1" data-toggle="modal" data-target="#modal-default">
-                <i class="fa fa-plus"></i> Tambah User
+              <button type="button" class="btn mt-1 text-light" data-toggle="modal" data-target="#modal-default" style="background-color: #130f40;"> 
+                <i class="fa fa-plus mr-1"></i> Tambah User
               </button>
               <a href="page/user/print_user.php" target="_blank">
-                <button type="button" class="btn btn-success mt-1">
-                  <i class="fa fa-print"></i> Print PDF
+                <button type="button" class="btn mt-1 text-light" style="background-color: #130f40;">
+                  <i class="fas fa-file-pdf mr-1"></i> Print PDF
                 </button>
               </a>
               <a href="page/user/print_user_excel.php">
-                <button type="button" class="btn btn-success mt-1">
-                  <i class="fa fa-print"></i> Print Excel
+                <button type="button" class="btn text-light mt-1" style="background-color: #130f40;">
+                  <i class="fas fa-file-excel mr-1"></i> Print Excel
                 </button>
               </a>
             </div>
@@ -146,7 +146,7 @@
             <!-- /.card-body -->
 
             <div class="card-footer">
-              <button type="submit" class="btn btn-primary">Simpan</button>
+              <button type="submit" class="btn text-light" style="background-color: #130f40;">Simpan Data</button>
             </div>
           </form>
         </div>

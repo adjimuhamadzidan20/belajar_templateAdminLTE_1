@@ -3,6 +3,28 @@
 
   require 'config/koneksi.php';
 
+  // set cookie
+  if (isset($_COOKIE['id_user']) && isset($_COOKIE['pass_user'])) {
+    $id = $_COOKIE['id_user'];
+    $pass = $_COOKIE['pass_user'];
+
+    $sql = "SELECT nama_user FROM tb_user WHERE id_user = $id";
+    $hasil = $mysqli->query($sql);
+    $data = mysqli_fetch_assoc($hasil);
+
+    if ($pass === hash('sha256', $data['pass_user'])) {
+      $_SESSION['login'] == true;
+    }
+
+  }
+
+  // set session
+  if (isset($_SESSION['login'])) {
+    header('Location: index.php');
+    exit;
+  }
+
+  // proses login
   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $userID = htmlspecialchars($_POST['id']);
     $userPass = htmlspecialchars($_POST['pass']);
@@ -18,7 +40,14 @@
       $_SESSION['nama'] = $rowAkun['nama_user'];
       $_SESSION['status'] = $rowAkun['status'];
 
+      // set remember me
+      if (isset($_POST['remember'])) {
+        setcookie('id_user', hash('sha256', $rowAkun['id_user']), time() + 60);
+        setcookie('pass_user', hash('sha256', $rowAkun['password']), time() + 60);
+      }
+
       header('Location: index.php');
+      exit;
     } 
 
     else {
@@ -33,7 +62,14 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Belajar Web || Login</title>
+  <title>Inventories || Login</title>
+
+  <style>
+    * {
+      font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    }
+  </style>
+  
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -51,7 +87,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="login.php">Belajar Web <b>AdminLTE</b></a>
+    <a href="login.php"><b>Inventories</b> Web</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
@@ -63,7 +99,7 @@
           <input type="text" class="form-control" placeholder="ID User" name="id" required> 
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
+              <span class="fas fa-user"></span>
             </div>
           </div>
         </div>
@@ -78,7 +114,7 @@
         <div class="row">
           <div class="col-8">
             <div class="icheck-primary">
-              <input type="checkbox" id="remember">
+              <input type="checkbox" id="remember" name="remember">
               <label for="remember">
                 Remember Me
               </label>
@@ -86,7 +122,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Log In</button>
+            <button type="submit" class="btn text-light btn-block" style="background-color: #130f40;">Log In</button>
           </div>
           <!-- /.col -->
         </div>

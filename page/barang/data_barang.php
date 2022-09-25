@@ -24,17 +24,17 @@
             <div class="card-header">
               <h3 class="card-title">List Tabel Data Barang</h3><br>
               <!-- option button -->
-              <button type="button" class="btn btn-success mt-1" data-toggle="modal" data-target="#modal-default">
-                <i class="fa fa-plus"></i> Input Data Barang
+              <button type="button" class="btn text-light mt-1" data-toggle="modal" data-target="#modal-default" style="background-color: #130f40;">
+                <i class="fa fa-plus mr-1"></i> Input Data Barang
               </button>
               <a href="page/barang/print_barang.php" target="_blank">
-                <button type="button" class="btn btn-success mt-1">
-                  <i class="fa fa-print"></i> Print PDF
+                <button type="button" class="btn text-light mt-1" style="background-color: #130f40;">
+                  <i class="fas fa-file-pdf mr-1"></i> Print PDF
                 </button>
               </a>
               <a href="page/barang/print_barang_excel.php">
-                <button type="button" class="btn btn-success mt-1">
-                  <i class="fa fa-print"></i> Print Excel
+                <button type="button" class="btn text-light mt-1" style="background-color: #130f40;">
+                  <i class="fas fa-file-excel mr-1"></i> Print Excel
                 </button>
               </a>
             </div>
@@ -134,7 +134,7 @@
             <!-- /.card-body -->
 
             <div class="card-footer">
-              <button type="submit" class="btn btn-primary">Simpan Data</button>
+              <button type="submit" class="btn text-light" style="background-color: #130f40;">Simpan Data</button>
             </div>
           </form>
         </div>

@@ -29,6 +29,23 @@
 
 ?>
 
+<!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <h1>Edit Data Transaksi</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="index.php?page=data_transaksi">Data Transaksi</a></li>
+            <li class="breadcrumb-item active">Edit Data</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
 <form role="form" method="post">
 	<div class="card-body">
 	  <div class="form-group">
@@ -54,6 +71,6 @@
 	<!-- /.card-body -->
 
 	<div class="card-footer">
-	  <button type="submit" class="btn btn-primary" onclick="return confirm('Edit data?');" name="edit"><i class="fa fa-edit"></i> Edit Data</button>
+	  <button type="submit" class="btn text-light" style="background-color: #130f40;" onclick="return confirm('Edit data?');" name="edit"><i class="fa fa-edit"></i> Edit Data</button>
 	</div>
 </form>
