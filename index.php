@@ -62,12 +62,15 @@
       </li>
     </ul>
     <ul class="navbar-nav">
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index.php" class="nav-link"><i class="fas fa-home mr-1"></i> Beranda</a>
+      <li class="nav-item d-sm-inline-block">
+        <a href="index.php" class="nav-link">
+          <i class="fas fa-home mr-1"></i> Beranda
+        </a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
+      <li class="nav-item d-sm-inline-block">
         <a href="logout.php" class="nav-link" onclick="return confirm('Yakin ingin logout?');">
-          <i class="fas fa-sign-out-alt mr-1"></i> Logout</a>
+          <i class="fas fa-sign-out-alt mr-1"></i> Logout
+        </a>
       </li>
     </ul>
   </nav>

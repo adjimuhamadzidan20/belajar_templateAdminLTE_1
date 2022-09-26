@@ -68,6 +68,7 @@
     * {
       font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     }
+
   </style>
   
   <!-- Tell the browser to be responsive to screen width -->
@@ -84,7 +85,8 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style=" background-image: url(img/pexels-lachlan-ross-7084349.jpg); background-size: cover; 
+background-position: center;">
 <div class="login-box">
   <div class="login-logo">
     <a href="login.php"><b>Inventories</b> Web</a>
